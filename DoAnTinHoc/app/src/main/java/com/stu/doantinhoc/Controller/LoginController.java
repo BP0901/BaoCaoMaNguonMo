@@ -45,9 +45,9 @@ public class LoginController {
             if (user.getUsername().equals(username))
                 if (user.getPassword().equals(password))
                     if (user.isType()) {
-                       
+                        context.startActivity(new Intent(context, MainMenuActivity.class));
                     } else {
-                        
+//                        context.startActivity(new Intent(context, MainStaffActivity.class));
                     }
                 else {
                     MsgDialog.showDialog(context, "Sai mật khẩu hoặc tài khoản!");
@@ -60,19 +60,22 @@ public class LoginController {
 
 
     public void loadDataFromDB() {
-        if (ListData.FistRun) {
 
+            ListData.listCate.clear();
             CategoryRequestHttp requestHttp = new CategoryRequestHttp(context);
             requestHttp.getData(Url.URLGETALLCATE);
 
+            ListData.listFood.clear();
             FoodRequestHttp foodRequestHttp = new FoodRequestHttp(context);
             foodRequestHttp.getData(Url.URLGETALLFOOD);
 
-            for (int i = 1; i <= 15; i++) {
-                ListData.listTable.add(new Table("Table " + i, new ArrayList<>()));
+            if(ListData.FistRun) {
+                for (int i = 1; i <= 15; i++) {
+                    ListData.listTable.add(new Table("Table " + i, new ArrayList<>()));
+                }
+                ListData.FistRun = false;
             }
 
-            ListData.FistRun = false;
+
         }
-    }
 }
