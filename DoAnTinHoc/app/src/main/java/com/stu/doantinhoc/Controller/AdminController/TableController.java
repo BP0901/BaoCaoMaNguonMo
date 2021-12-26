@@ -96,7 +96,7 @@ public class TableController {
             }
         }
         loadRCV(ListData.listTable.get(table).getListFoods(), table);
-//        setTotalMoney(ListData.listTable.get(table).getListFoods());
+        setTotalMoney(ListData.listTable.get(table).getListFoods());
     }
 
     private void setTotalMoney(ArrayList<FoodTable> list) {

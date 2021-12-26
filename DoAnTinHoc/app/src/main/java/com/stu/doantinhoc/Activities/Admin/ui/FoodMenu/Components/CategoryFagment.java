@@ -78,9 +78,9 @@ public class CategoryFagment extends Fragment {
         binding = null;
     }
 
-//    @Override
-//    public void onResume() {
-//        controller.loadRCVCate();
-//        super.onResume();
-//    }
+    @Override
+    public void onResume() {
+        controller.loadRCVCate();
+        super.onResume();
+    }
 }

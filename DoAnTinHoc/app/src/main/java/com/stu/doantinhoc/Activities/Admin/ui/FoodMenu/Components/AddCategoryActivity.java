@@ -145,7 +145,7 @@ public class AddCategoryActivity extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> map = new HashMap<String, String>();
                 map.put("t1", name);
-                map.put("upload", "");
+                map.put("upload", encodeImageString);
                 return map;
             }
         };
