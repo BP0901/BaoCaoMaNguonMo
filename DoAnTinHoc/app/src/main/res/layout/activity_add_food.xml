@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/grey">
+    android:background="@color/grey"
+    tools:context=".Activities.Admin.ui.FoodMenu.Components.AddFoodActivity">
 
     <TableLayout
         android:layout_width="wrap_content"
@@ -147,11 +148,31 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center"
                 android:gravity="center"
-                android:text="Image:"
+                android:text="Picture:"
                 android:textColor="@color/white"
                 android:textSize="20dp" />
 
+            <Button
+                android:id="@+id/btnSelectPicFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="9"
+                android:backgroundTint="@color/redmain"
+                android:text="select picture" />
 
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/imgAddFoodPic"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:layout_span="10" />
         </TableRow>
 
         <TableRow

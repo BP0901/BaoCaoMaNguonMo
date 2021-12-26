@@ -9,7 +9,7 @@
     android:background="@color/grey">
 
     <ImageView
-        android:id="@+id/imgAddFoodRow"
+        android:id="@+id/imgAddFoodTableRow"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_margin="10dp"
@@ -28,7 +28,7 @@
         android:text="Name"
         android:textColor="@color/white"
         android:textSize="30dp"
-        app:layout_constraintLeft_toRightOf="@+id/imgAddFoodRow"
+        app:layout_constraintLeft_toRightOf="@+id/imgAddFoodTableRow"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
