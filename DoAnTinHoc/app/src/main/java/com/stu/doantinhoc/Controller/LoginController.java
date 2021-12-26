@@ -45,9 +45,15 @@ public class LoginController {
             if (user.getUsername().equals(username))
                 if (user.getPassword().equals(password))
                     if (user.isType()) {
+<<<<<<< HEAD
 //                        context.startActivity(new Intent(context, MainMenuActivity.class));
                     } else {
                         context.startActivity(new Intent(context, MainStaffActivity.class));
+=======
+                        context.startActivity(new Intent(context, MainMenuActivity.class));
+                    } else {
+//                        context.startActivity(new Intent(context, MainStaffActivity.class));
+>>>>>>> 7867c4b3c3f963581a8ab111df661d16e7572fd8
                     }
                 else {
                     MsgDialog.showDialog(context, "Sai mật khẩu hoặc tài khoản!");
