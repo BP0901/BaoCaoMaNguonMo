@@ -60,7 +60,7 @@ public class Category_foods_horizontal extends RecyclerView.Adapter<Category_foo
         if (checked) {
             ArrayList<Food> list = new ArrayList<>();
             try {
-                Category cate = ListData.listCate.get(1);
+                Category cate = ListData.listCate.get(0);
                 for (Food food:ListData.listFood) {
                     if(food.getCategory()== cate.getId())
                         list.add(food);
@@ -79,7 +79,7 @@ public class Category_foods_horizontal extends RecyclerView.Adapter<Category_foo
                 notifyDataSetChanged();
                 ArrayList<Food> list = new ArrayList<>();
                 try {
-                    Category cate = ListData.listCate.get(position+1);
+                    Category cate = ListData.listCate.get(position);
                     for (Food food:ListData.listFood) {
                         if(food.getCategory()== cate.getId())
                             list.add(food);
